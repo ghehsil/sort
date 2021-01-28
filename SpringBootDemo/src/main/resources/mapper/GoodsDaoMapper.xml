@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.ls.dao.GoodsDao">
+    <resultMap id="goodsMap" type="com.ls.entity.Goods">
+		<id property="id" column="id"/>
+		<result property="userid" column="userId"/>
+		<result property="name" column="name"/>
+		<result property="price" column="price"/>
+		<result property="address" column="address"/>
+		<result property="createdate" column="createDate"/>
+
+    </resultMap>
+    
+    <sql id="queryCondition">
+        <where>
+			<if test="id != null and id != ''">
+				and id = #{id}
+			</if>
+			<if test="userId != null and userId != ''">
+				and userId = #{userId}
+			</if>
+			<if test="name != null and name != ''">
+				and name = #{name}
+			</if>
+			<if test="address != null and address != ''">
+				and address = #{address}
+			</if>
+        </where>
+    </sql>
+    	
+    <select id="getByMap" parameterType="map" resultMap="goodsMap">
+    	SELECT * FROM goods
+		<include refid="queryCondition" />
+    </select>
+    
+    <select id="getById" parameterType="int" resultMap="goodsMap">
+    	SELECT * FROM goods WHERE id =#{id}
+    </select>
+    
+    <insert id="create" parameterType="com.ls.entity.Goods">
+        <selectKey resultType="int"  order="AFTER" keyProperty="id" >
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO goods(
+			id,
+			userId,
+			name,
+			price,
+			address,
+		    createDate
+		)VALUES(
+			#{id},
+			#{userId},
+			#{name},
+			#{price},
+			#{address},
+			NOW()
+		)
+    </insert>
+    
+    <update id="update" parameterType="com.ls.entity.Goods">
+		UPDATE goods SET
+			name = #{name},
+			address = #{address},
+			mobile = #{mobile},
+			email = #{email},
+			role = #{role}
+		WHERE id = #{id}
+    </update>
+    
+    <delete id="delete" parameterType="int">
+    	DELETE FROM goods WHERE id = #{id}
+    </delete>
+    
+</mapper>

@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "smybatis.type-aliases-package",
+      "type": "java.lang.String",
+      "description": "Description for smybatis.type-aliases-package."
+  }
+] }

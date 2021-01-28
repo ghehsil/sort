@@ -1,0 +1,468 @@
+2021-01-11 16:31:04.332  INFO 8943 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 8943 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:31:04.334  INFO 8943 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:31:04.369  INFO 8943 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:31:04.369  INFO 8943 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:31:04.842  WARN 8943 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:31:05.275  INFO 8943 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:31:05.284  INFO 8943 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:31:05.285  INFO 8943 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:31:05.338  INFO 8943 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:31:05.338  INFO 8943 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 968 ms
+2021-01-11 16:31:05.494  INFO 8943 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:31:05.802  WARN 8943 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/simon/IdeaProjects/SpringBootDemo/target/classes/mapper/UserDaoMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/simon/IdeaProjects/SpringBootDemo/target/classes/mapper/UserDaoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.abel.bean.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.abel.bean.User
+2021-01-11 16:31:05.802  INFO 8943 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:31:05.805  INFO 8943 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-01-11 16:31:05.814  INFO 8943 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-11 16:31:05.839 ERROR 8943 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/simon/IdeaProjects/SpringBootDemo/target/classes/mapper/UserDaoMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/simon/IdeaProjects/SpringBootDemo/target/classes/mapper/UserDaoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.abel.bean.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.abel.bean.User
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.2.jar:5.3.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.2.jar:5.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) [spring-boot-2.4.1.jar:2.4.1]
+	at com.ls.SpringbootdemoApplication.main(SpringbootdemoApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.4.1.jar:2.4.1]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/simon/IdeaProjects/SpringBootDemo/target/classes/mapper/UserDaoMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/simon/IdeaProjects/SpringBootDemo/target/classes/mapper/UserDaoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.abel.bean.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.abel.bean.User
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.2.jar:5.3.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.2.jar:5.3.2]
+	... 25 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/simon/IdeaProjects/SpringBootDemo/target/classes/mapper/UserDaoMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/simon/IdeaProjects/SpringBootDemo/target/classes/mapper/UserDaoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.abel.bean.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.abel.bean.User
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523) ~[mybatis-spring-1.3.2.jar:1.3.2]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380) ~[mybatis-spring-1.3.2.jar:1.3.2]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547) ~[mybatis-spring-1.3.2.jar:1.3.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153) ~[mybatis-spring-boot-autoconfigure-1.3.2.jar:1.3.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$520e4dd4.CGLIB$sqlSessionFactory$0(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.2.jar:1.3.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$520e4dd4$$FastClassBySpringCGLIB$$fd121dc0.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.2.jar:1.3.2]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.2.jar:5.3.2]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.2.jar:5.3.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$520e4dd4.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-1.3.2.jar:1.3.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.2.jar:5.3.2]
+	... 26 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/simon/IdeaProjects/SpringBootDemo/target/classes/mapper/UserDaoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.abel.bean.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.abel.bean.User
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521) ~[mybatis-spring-1.3.2.jar:1.3.2]
+	... 39 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.abel.bean.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.abel.bean.User
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:68) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:128) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118) ~[mybatis-3.4.6.jar:3.4.6]
+	... 41 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.abel.bean.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.abel.bean.User
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.4.6.jar:3.4.6]
+	... 45 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: cn.abel.bean.User
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.4.6.jar:3.4.6]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.4.6.jar:3.4.6]
+	... 47 common frames omitted
+
+2021-01-11 16:32:48.131  INFO 8959 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 8959 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:32:48.133  INFO 8959 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:32:48.166  INFO 8959 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:32:48.167  INFO 8959 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:32:48.517  WARN 8959 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:32:48.887  INFO 8959 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:32:48.894  INFO 8959 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:32:48.894  INFO 8959 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:32:48.935  INFO 8959 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:32:48.935  INFO 8959 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 768 ms
+2021-01-11 16:32:49.048  INFO 8959 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:32:49.483  WARN 8959 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 16:32:49.523  INFO 8959 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 16:32:49.566  INFO 8959 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8009 (http) with context path ''
+2021-01-11 16:32:49.575  INFO 8959 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.723 seconds (JVM running for 2.194)
+2021-01-11 16:33:27.498  INFO 8959 --- [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:33:27.498  INFO 8959 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:33:27.499  INFO 8959 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 16:40:01.786  INFO 8959 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:40:05.015  INFO 8990 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 8990 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:40:05.017  INFO 8990 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:40:05.052  INFO 8990 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:40:05.052  INFO 8990 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:40:05.447  WARN 8990 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:40:05.833  INFO 8990 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:40:05.840  INFO 8990 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:40:05.841  INFO 8990 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:40:05.884  INFO 8990 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:40:05.884  INFO 8990 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 831 ms
+2021-01-11 16:40:06.010  INFO 8990 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:40:06.434  WARN 8990 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 16:40:06.467  INFO 8990 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 16:40:06.505  INFO 8990 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8009 (http) with context path ''
+2021-01-11 16:40:06.514  INFO 8990 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.761 seconds (JVM running for 2.307)
+2021-01-11 16:40:15.720  INFO 8990 --- [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:40:15.721  INFO 8990 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:40:15.722  INFO 8990 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 16:42:01.641  INFO 8990 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:42:03.302  INFO 9000 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9000 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:42:03.304  INFO 9000 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:42:03.343  INFO 9000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:42:03.343  INFO 9000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:42:03.745  WARN 9000 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:42:04.116  INFO 9000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:42:04.123  INFO 9000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:42:04.123  INFO 9000 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:42:04.162  INFO 9000 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:42:04.162  INFO 9000 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 818 ms
+2021-01-11 16:42:04.268  INFO 9000 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:42:04.642  WARN 9000 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 16:42:04.674  INFO 9000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 16:42:04.710  INFO 9000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8009 (http) with context path ''
+2021-01-11 16:42:04.719  INFO 9000 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.756 seconds (JVM running for 2.312)
+2021-01-11 16:43:22.640  INFO 9000 --- [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:43:22.641  INFO 9000 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:43:22.642  INFO 9000 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 16:45:31.446  INFO 9000 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:45:35.326  INFO 9460 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9460 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:45:35.328  INFO 9460 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:45:35.363  INFO 9460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:45:35.364  INFO 9460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:45:35.762  WARN 9460 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:45:36.105  INFO 9460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:45:36.112  INFO 9460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:45:36.112  INFO 9460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:45:36.154  INFO 9460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:45:36.155  INFO 9460 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 791 ms
+2021-01-11 16:45:36.275  INFO 9460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:45:36.670  WARN 9460 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 16:45:36.701  INFO 9460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 16:45:36.736  INFO 9460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8009 (http) with context path ''
+2021-01-11 16:45:36.746  INFO 9460 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.734 seconds (JVM running for 2.415)
+2021-01-11 16:45:39.218  INFO 9460 --- [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:45:39.218  INFO 9460 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:45:39.219  INFO 9460 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 16:48:53.118  INFO 9460 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:48:56.550  INFO 9728 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9728 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:48:56.553  INFO 9728 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:48:56.587  INFO 9728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:48:56.587  INFO 9728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:48:56.949  WARN 9728 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:48:57.359  INFO 9728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:48:57.366  INFO 9728 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:48:57.366  INFO 9728 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:48:57.408  INFO 9728 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:48:57.409  INFO 9728 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 821 ms
+2021-01-11 16:48:57.545  INFO 9728 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:48:57.967  WARN 9728 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 16:48:58.002  INFO 9728 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 16:48:58.040  INFO 9728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8009 (http) with context path ''
+2021-01-11 16:48:58.049  INFO 9728 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.759 seconds (JVM running for 2.375)
+2021-01-11 16:49:02.698  INFO 9728 --- [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:49:02.699  INFO 9728 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:49:02.700  INFO 9728 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 16:51:42.082  INFO 9728 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:51:44.573  INFO 9746 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9746 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:51:44.577  INFO 9746 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:51:44.623  INFO 9746 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:51:44.623  INFO 9746 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:51:45.036  WARN 9746 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:51:45.419  INFO 9746 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:51:45.427  INFO 9746 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:51:45.427  INFO 9746 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:51:45.473  INFO 9746 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:51:45.473  INFO 9746 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 849 ms
+2021-01-11 16:51:45.608  INFO 9746 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:51:46.012  WARN 9746 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 16:51:46.044  INFO 9746 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 16:51:46.080  INFO 9746 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8009 (http) with context path ''
+2021-01-11 16:51:46.088  INFO 9746 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.89 seconds (JVM running for 2.508)
+2021-01-11 16:51:53.275  INFO 9746 --- [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:51:53.276  INFO 9746 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:51:53.277  INFO 9746 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 16:54:01.809  INFO 9746 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:54:08.589  INFO 9761 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9761 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:54:08.592  INFO 9761 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:54:08.642  INFO 9761 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:54:08.642  INFO 9761 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:54:09.082  WARN 9761 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:54:09.573  INFO 9761 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:54:09.582  INFO 9761 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:54:09.582  INFO 9761 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:54:09.632  INFO 9761 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:54:09.632  INFO 9761 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 989 ms
+2021-01-11 16:54:09.800  INFO 9761 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:54:10.309  WARN 9761 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 16:54:10.349  INFO 9761 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 16:54:10.389  INFO 9761 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8009 (http) with context path ''
+2021-01-11 16:54:10.398  INFO 9761 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 2.213 seconds (JVM running for 3.327)
+2021-01-11 16:54:35.428  INFO 9761 --- [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:54:35.428  INFO 9761 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:54:35.429  INFO 9761 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 16:57:17.822  INFO 9761 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:57:21.565  INFO 9893 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9893 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:57:21.567  INFO 9893 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:57:21.601  INFO 9893 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:57:21.601  INFO 9893 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:57:22.012  WARN 9893 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:57:22.381  INFO 9893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:57:22.388  INFO 9893 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:57:22.389  INFO 9893 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:57:22.436  INFO 9893 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:57:22.436  INFO 9893 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 834 ms
+2021-01-11 16:57:22.593  INFO 9893 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:57:23.056  WARN 9893 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 16:57:23.094  INFO 9893 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 16:57:23.130  INFO 9893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8009 (http) with context path ''
+2021-01-11 16:57:23.138  INFO 9893 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.902 seconds (JVM running for 2.601)
+2021-01-11 16:57:28.017  INFO 9893 --- [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:57:28.017  INFO 9893 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:57:28.018  INFO 9893 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-01-11 16:59:30.034  INFO 9893 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:59:33.680  INFO 9909 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9909 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 16:59:33.683  INFO 9909 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 16:59:33.717  INFO 9909 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 16:59:33.718  INFO 9909 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 16:59:34.176  WARN 9909 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 16:59:34.616  INFO 9909 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8009 (http)
+2021-01-11 16:59:34.623  INFO 9909 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 16:59:34.624  INFO 9909 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 16:59:34.669  INFO 9909 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:59:34.669  INFO 9909 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 951 ms
+2021-01-11 16:59:34.804  INFO 9909 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:59:35.265  WARN 9909 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 16:59:35.303  INFO 9909 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 16:59:35.344  INFO 9909 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8009 (http) with context path ''
+2021-01-11 16:59:35.354  INFO 9909 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 2.013 seconds (JVM running for 2.629)
+2021-01-11 16:59:39.980  INFO 9909 --- [http-nio-8009-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:59:39.980  INFO 9909 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:59:39.981  INFO 9909 --- [http-nio-8009-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 17:00:48.528  INFO 9909 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:00:50.878  INFO 9917 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9917 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 17:00:50.881  INFO 9917 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 17:00:50.921  INFO 9917 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 17:00:50.921  INFO 9917 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 17:00:51.342  WARN 9917 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 17:00:51.656  WARN 9917 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.IllegalStateException: Unable to create the directory [/app] to use as the base directory
+2021-01-11 17:00:51.664  INFO 9917 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-11 17:00:51.685 ERROR 9917 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.IllegalStateException: Unable to create the directory [/app] to use as the base directory
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582) ~[spring-context-5.3.2.jar:5.3.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) [spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) [spring-boot-2.4.1.jar:2.4.1]
+	at com.ls.SpringbootdemoApplication.main(SpringbootdemoApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.4.1.jar:2.4.1]
+Caused by: java.lang.IllegalStateException: Unable to create the directory [/app] to use as the base directory
+	at org.apache.catalina.startup.Tomcat.initBaseDir(Tomcat.java:873) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.startup.Tomcat.getServer(Tomcat.java:657) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.startup.Tomcat.getService(Tomcat.java:589) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181) ~[spring-boot-2.4.1.jar:2.4.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159) ~[spring-boot-2.4.1.jar:2.4.1]
+	... 14 common frames omitted
+
+2021-01-11 17:01:12.845  INFO 9920 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9920 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 17:01:12.848  INFO 9920 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 17:01:12.894  INFO 9920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 17:01:12.894  INFO 9920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 17:01:13.330  WARN 9920 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 17:01:13.716  INFO 9920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2021-01-11 17:01:13.722  INFO 9920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 17:01:13.722  INFO 9920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 17:01:13.761  INFO 9920 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 17:01:13.761  INFO 9920 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 866 ms
+2021-01-11 17:01:13.880  INFO 9920 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:01:14.309  WARN 9920 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 17:01:14.342  INFO 9920 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 17:01:14.377  INFO 9920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2021-01-11 17:01:14.385  INFO 9920 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.846 seconds (JVM running for 2.441)
+2021-01-11 17:01:22.391  INFO 9920 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 17:01:22.391  INFO 9920 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 17:01:22.392  INFO 9920 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 17:02:01.164  INFO 9920 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:02:03.976  INFO 9927 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 9927 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 17:02:03.979  INFO 9927 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 17:02:04.022  INFO 9927 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 17:02:04.022  INFO 9927 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 17:02:04.500  WARN 9927 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 17:02:04.869  INFO 9927 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2021-01-11 17:02:04.876  INFO 9927 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 17:02:04.876  INFO 9927 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 17:02:04.922  INFO 9927 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-11 17:02:04.923  INFO 9927 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 900 ms
+2021-01-11 17:02:05.087  INFO 9927 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:02:05.582  WARN 9927 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 17:02:05.622  INFO 9927 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 17:02:05.661  INFO 9927 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path ''
+2021-01-11 17:02:05.670  INFO 9927 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 2.131 seconds (JVM running for 2.75)
+2021-01-11 17:02:12.459  INFO 9927 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 17:02:12.459  INFO 9927 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 17:02:12.460  INFO 9927 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 17:42:38.758  INFO 9927 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:43:55.834  INFO 12454 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 12454 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 17:43:55.836  INFO 12454 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 17:43:55.873  INFO 12454 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 17:43:55.873  INFO 12454 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 17:43:56.370  WARN 12454 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 17:43:56.765  INFO 12454 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2021-01-11 17:43:56.773  INFO 12454 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 17:43:56.773  INFO 12454 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 17:43:56.827  INFO 12454 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2021-01-11 17:43:56.828  INFO 12454 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 954 ms
+2021-01-11 17:43:56.981  INFO 12454 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:43:57.439  WARN 12454 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 17:43:57.484  INFO 12454 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 17:43:57.531  INFO 12454 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path '/demo'
+2021-01-11 17:43:57.542  INFO 12454 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 2.032 seconds (JVM running for 2.555)
+2021-01-11 17:44:30.402  INFO 12454 --- [http-nio-8001-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 17:44:30.403  INFO 12454 --- [http-nio-8001-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 17:44:30.404  INFO 12454 --- [http-nio-8001-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 17:45:06.213  INFO 12454 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:45:10.040  INFO 12461 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 12461 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 17:45:10.043  INFO 12461 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 17:45:10.077  INFO 12461 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 17:45:10.077  INFO 12461 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 17:45:10.490  WARN 12461 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 17:45:10.897  INFO 12461 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2021-01-11 17:45:10.905  INFO 12461 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 17:45:10.905  INFO 12461 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 17:45:10.952  INFO 12461 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2021-01-11 17:45:10.952  INFO 12461 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 874 ms
+2021-01-11 17:45:11.090  INFO 12461 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:45:11.545  WARN 12461 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 17:45:11.578  INFO 12461 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 17:45:11.611  INFO 12461 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path '/demo'
+2021-01-11 17:45:11.620  INFO 12461 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.883 seconds (JVM running for 2.505)
+2021-01-11 17:45:25.773  INFO 12461 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 17:45:25.773  INFO 12461 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 17:45:25.774  INFO 12461 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 17:46:37.258  INFO 12461 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:46:42.498  INFO 12469 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 12469 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 17:46:42.500  INFO 12469 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 17:46:42.540  INFO 12469 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 17:46:42.541  INFO 12469 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 17:46:42.950  WARN 12469 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 17:46:43.359  INFO 12469 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2021-01-11 17:46:43.365  INFO 12469 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 17:46:43.365  INFO 12469 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 17:46:43.409  INFO 12469 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2021-01-11 17:46:43.409  INFO 12469 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 867 ms
+2021-01-11 17:46:43.532  INFO 12469 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:46:43.880  INFO 12469 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 17:46:43.922  INFO 12469 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path '/demo'
+2021-01-11 17:46:43.994  INFO 12469 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 1.802 seconds (JVM running for 2.376)
+2021-01-11 17:47:06.455  INFO 12469 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 17:47:06.456  INFO 12469 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 17:47:06.457  INFO 12469 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 17:48:52.161  INFO 12469 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:48:56.799  INFO 12657 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 12657 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 17:48:56.802  INFO 12657 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 17:48:56.871  INFO 12657 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 17:48:56.873  INFO 12657 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 17:48:57.502  WARN 12657 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 17:48:58.086  INFO 12657 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2021-01-11 17:48:58.096  INFO 12657 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 17:48:58.097  INFO 12657 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 17:48:58.157  INFO 12657 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2021-01-11 17:48:58.157  INFO 12657 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1283 ms
+2021-01-11 17:48:58.357  INFO 12657 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:48:58.843  INFO 12657 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 17:48:58.902  INFO 12657 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path '/demo'
+2021-01-11 17:48:58.916  INFO 12657 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 2.614 seconds (JVM running for 3.528)
+2021-01-11 17:49:04.259  INFO 12657 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 17:49:04.260  INFO 12657 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 17:49:04.261  INFO 12657 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 17:49:10.078  INFO 12657 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:49:15.180  INFO 12667 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 12667 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 17:49:15.183  INFO 12667 --- [restartedMain] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 17:49:15.217  INFO 12667 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-11 17:49:15.217  INFO 12667 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-11 17:49:15.678  WARN 12667 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 17:49:15.723  INFO 12667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-11 17:49:15.725  INFO 12667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-01-11 17:49:15.740  INFO 12667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2021-01-11 17:49:16.153  INFO 12667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2021-01-11 17:49:16.160  INFO 12667 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 17:49:16.161  INFO 12667 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 17:49:16.210  INFO 12667 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2021-01-11 17:49:16.211  INFO 12667 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 993 ms
+2021-01-11 17:49:16.374  INFO 12667 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:49:17.019  WARN 12667 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 17:49:17.054  INFO 12667 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2021-01-11 17:49:17.061  INFO 12667 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-11 17:49:17.062  INFO 12667 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2021-01-11 17:49:17.062  INFO 12667 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2021-01-11 17:49:17.063  INFO 12667 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-11 17:49:17.063  INFO 12667 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-11 17:49:17.063  INFO 12667 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2021-01-11 17:49:17.063  INFO 12667 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@178eae34
+2021-01-11 17:49:17.084  INFO 12667 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-11 17:49:17.125  INFO 12667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path '/demo'
+2021-01-11 17:49:17.126  INFO 12667 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2021-01-11 17:49:17.127  INFO 12667 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-11 17:49:17.136  INFO 12667 --- [restartedMain] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 2.288 seconds (JVM running for 2.773)
+2021-01-11 17:49:29.147  INFO 12667 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 17:49:29.148  INFO 12667 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 17:49:29.149  INFO 12667 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-11 17:54:42.672  INFO 12667 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-01-11 17:54:42.686  INFO 12667 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2021-01-11 17:54:42.686  INFO 12667 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-01-11 17:54:42.686  INFO 12667 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-01-11 17:54:42.686  INFO 12667 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-01-11 17:54:42.699  INFO 12667 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:58:29.088  INFO 12834 --- [main] c.l.a.SpringbootdemoApplication          : Starting SpringbootdemoApplication using Java 1.8.0_191 on baolishengdeMacBook-Pro.local with PID 12834 (/Users/simon/IdeaProjects/SpringBootDemo/target/classes started by simon in /Users/simon/IdeaProjects/SpringBootDemo)
+2021-01-11 17:58:29.091  INFO 12834 --- [main] c.l.a.SpringbootdemoApplication          : No active profile set, falling back to default profiles: default
+2021-01-11 17:58:29.665  WARN 12834 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.ls.application]' package. Please check your configuration.
+2021-01-11 17:58:30.124  INFO 12834 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8001 (http)
+2021-01-11 17:58:30.134  INFO 12834 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-11 17:58:30.135  INFO 12834 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-11 17:58:30.201  INFO 12834 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2021-01-11 17:58:30.202  INFO 12834 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1067 ms
+2021-01-11 17:58:30.359  INFO 12834 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 17:58:30.778  WARN 12834 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-01-11 17:58:30.849  INFO 12834 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8001 (http) with context path '/demo'
+2021-01-11 17:58:30.859  INFO 12834 --- [main] c.l.a.SpringbootdemoApplication          : Started SpringbootdemoApplication in 2.22 seconds (JVM running for 2.852)
+2021-01-11 17:58:35.361  INFO 12834 --- [http-nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 17:58:35.361  INFO 12834 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-11 17:58:35.362  INFO 12834 --- [http-nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
