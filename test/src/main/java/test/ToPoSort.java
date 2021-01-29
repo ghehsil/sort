@@ -67,7 +67,7 @@ public class ToPoSort {
         public void topoSortByDFS() {
             boolean[] visited = new boolean[v];
             for (int i = 0; i < v; ++i) { // 深度优先遍历图
-                if (visited[i] == false) {
+                if (!visited[i]) {
                     visited[i] = true;
                     dfs(i, visited);
                 }
@@ -77,7 +77,7 @@ public class ToPoSort {
         private void dfs(int vertex, boolean[] visited) {
             for (int i = 0; i < inverseAdj[vertex].size(); ++i) {
                 int w = inverseAdj[vertex].get(i);
-                if (visited[w] == true) {
+                if (visited[w]) {
                     continue;
                 }
                 visited[w] = true;
