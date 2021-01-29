@@ -3,6 +3,7 @@ package test;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 @Service
 public class ToPoSort {
@@ -47,9 +48,11 @@ public class ToPoSort {
                     inDegree[w]++;
                 }
             }
-            LinkedList<Integer> queue = new LinkedList<>();
+            Queue<Integer> queue = new LinkedList<>();
             for (int i = 0; i < v; ++i) {
-                if (inDegree[i] == 0) queue.add(i);
+                if (inDegree[i] == 0) {
+                    queue.add(i);
+                }
             }
             while (!queue.isEmpty()) {
                 int i = queue.remove();
