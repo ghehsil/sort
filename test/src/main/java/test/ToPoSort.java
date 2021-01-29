@@ -69,19 +69,19 @@ public class ToPoSort {
             for (int i = 0; i < v; ++i) { // 深度优先遍历图
                 if (visited[i] == false) {
                     visited[i] = true;
-                    dfs(i, inverseAdj, visited);
+                    dfs(i, visited);
                 }
             }
         }
 
-        private void dfs(int vertex, LinkedList<Integer> inverseAdj[], boolean[] visited) {
+        private void dfs(int vertex, boolean[] visited) {
             for (int i = 0; i < inverseAdj[vertex].size(); ++i) {
                 int w = inverseAdj[vertex].get(i);
                 if (visited[w] == true) {
                     continue;
                 }
                 visited[w] = true;
-                dfs(w, inverseAdj, visited);
+                dfs(w, visited);
             } // 先把vertex这个顶点可达的所有顶点都打印出来之后，再打印它自己
             System.out.print("->" + vertex);
         }
