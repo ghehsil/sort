@@ -19,11 +19,11 @@ public class BitMap {
     }
 
     public void set(int n) {
-        array[n % array.length * bit / bit] |= 1 << n % bit;
+        array[n % array.length] |= 1 << n % bit;
     }
 
     public boolean get(int n) {
-        return (array[n % array.length * bit / bit] & 1 << n % bit) != 0;
+        return (array[n % array.length] & 1 << n % bit) != 0;
     }
 
     public static void main(String[] args) {
