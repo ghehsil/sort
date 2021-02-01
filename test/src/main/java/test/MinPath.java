@@ -2,7 +2,9 @@ package test;
 
 import java.util.LinkedList;
 
-//最短路径
+/**
+ * 最短路径
+ */
 public class MinPath {
     public static void main(String[] args) {
         Graph g = new Graph(6);

@@ -3,8 +3,9 @@ package test;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
-//图的广度优先和深度优先
+/**
+ * 图的广度优先和深度优先
+ */
 public class Graph {
 
     public static void main(String[] args) {

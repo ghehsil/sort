@@ -1,7 +1,7 @@
 package test;
 
 /**
- * 动态规划
+ * 动态规划（0-1背包）
  */
 public class Bag {
     public static void main(String[] args) {

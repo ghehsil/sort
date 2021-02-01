@@ -3,6 +3,7 @@ package test;
 /**
  * 动态规划求不同字符串的不同
  * 当前的已经计算完，计算后面的
+ * 搜索引擎纠错功能
  *
  * array1[i] != array2[j]
  * min[i][j] = min(min[i][j-1] + 1, min[i-1][j] + 1, min[i-1][j-1] + 1)

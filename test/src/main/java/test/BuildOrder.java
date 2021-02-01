@@ -8,6 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 构建顺序
+ */
 public class BuildOrder {
     private final static String str1 = "ehealth-parent\n" +
             "\n" +
