@@ -3,7 +3,7 @@ package leetCode;
 public class uniquePaths2 {
 
     public static void main(String[] args) {
-        int[][] obstacleGrid = {{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
+        int[][] obstacleGrid = {{0}};
         System.out.println(uniquePathsWithObstacles(obstacleGrid));
     }
 
@@ -12,15 +12,19 @@ public class uniquePaths2 {
         int size = m + n - 2;
         int[][][] steps = new int[size][m][n];
 
-        if (n == 1 && m == 1) {
+        if (obstacleGrid[0][0] == 1) {
+            return 0;
+        }
+
+        if (n == 1 && m == 1 && obstacleGrid[0][0] == 0) {
             return 1;
         }
 
         //初始化
-        if (n > 1) {
+        if (n > 1 && obstacleGrid[0][1] == 0) {
             steps[0][0][1] = 1;
         }
-        if (m > 1) {
+        if (m > 1 && obstacleGrid[1][0] == 0) {
             steps[0][1][0] = 1;
         }
 
