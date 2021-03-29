@@ -22,5 +22,11 @@ public class sort {
 
         HashMap<String,String> map=new HashMap();
         map.put("a","aa");
+
+        int i=0;
+        for (; i < 10; i++) {
+            System.out.println(i);
+        }
+        System.out.println(i);
     }
 }
