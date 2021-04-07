@@ -1,5 +1,8 @@
 package leetCode;
 
+/**
+ * 从左上角走到右下角有几种走法（避开障碍物）
+ */
 public class uniquePaths2 {
 
     public static void main(String[] args) {

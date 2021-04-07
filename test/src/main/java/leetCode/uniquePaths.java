@@ -1,5 +1,8 @@
 package leetCode;
 
+/**
+ * 从左上角走到右下角有几种走法
+ */
 public class uniquePaths {
     public static void main(String[] args) {
         System.out.println(uniquePaths(1, 2));
