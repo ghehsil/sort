@@ -30,7 +30,7 @@ public class MavenWrapperDownloader {
 
     /**
      * Path to the maven-wrapper.properties file, which might contain a downloadUrl property to
-     * use instead of the default one.
+     * use instead of the default sortExam.one.
      */
     private static final String MAVEN_WRAPPER_PROPERTIES_PATH =
             ".mvn/wrapper/maven-wrapper.properties";

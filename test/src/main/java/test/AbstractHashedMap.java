@@ -1,5 +1,5 @@
 /*
- *  Licensed to the Apache Software Foundation (ASF) under one or more
+ *  Licensed to the Apache Software Foundation (ASF) under sortExam.one or more
  *  contributor license agreements.  See the NOTICE file distributed with
  *  this work for additional information regarding copyright ownership.
  *  The ASF licenses this file to You under the Apache License, Version 2.0
@@ -106,7 +106,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
     /**
      * Constructor which performs no validation on the passed in parameters.
      * 
-     * @param initialCapacity  the initial capacity, must be a power of two
+     * @param initialCapacity  the initial capacity, must be a power of sortExam.one.two
      * @param loadFactor  the load factor, must be &gt; 0.0f and generally &lt; 1.0f
      * @param threshold  the threshold, must be sensible
      */
@@ -123,7 +123,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
      * default load factor. 
      *
      * @param initialCapacity  the initial capacity
-     * @throws IllegalArgumentException if the initial capacity is less than one
+     * @throws IllegalArgumentException if the initial capacity is less than sortExam.one
      */
     protected AbstractHashedMap(int initialCapacity) {
         this(initialCapacity, DEFAULT_LOAD_FACTOR);
@@ -135,7 +135,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
      *
      * @param initialCapacity  the initial capacity
      * @param loadFactor  the load factor
-     * @throws IllegalArgumentException if the initial capacity is less than one
+     * @throws IllegalArgumentException if the initial capacity is less than sortExam.one
      * @throws IllegalArgumentException if the load factor is less than or equal to zero
      */
     protected AbstractHashedMap(int initialCapacity, float loadFactor) {
@@ -379,7 +379,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
     }
     
     /**
-     * Compares two keys, in internal converted form, to see if they are equal.
+     * Compares sortExam.one.two keys, in internal converted form, to see if they are equal.
      * This implementation uses the equals method and assumes neither key is null.
      * Subclasses can override this to match differently.
      * 
@@ -392,7 +392,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
     }
     
     /**
-     * Compares two values, in external form, to see if they are equal.
+     * Compares sortExam.one.two values, in external form, to see if they are equal.
      * This implementation uses the equals method and assumes neither value is null.
      * Subclasses can override this to match differently.
      * 
@@ -596,7 +596,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
     /**
      * Changes the size of the data structure to the capacity proposed.
      * 
-     * @param newCapacity  the new capacity of the array (a power of two, less or equal to max)
+     * @param newCapacity  the new capacity of the array (a power of sortExam.one.two, less or equal to max)
      */
     protected void ensureCapacity(int newCapacity) {
         int oldCapacity = data.length;
@@ -631,7 +631,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
 
     /**
      * Calculates the new capacity of the map.
-     * This implementation normalizes the capacity to a power of two.
+     * This implementation normalizes the capacity to a power of sortExam.one.two.
      * 
      * @param proposedCapacity  the proposed capacity
      * @return the normalized new capacity
@@ -642,7 +642,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
             newCapacity = MAXIMUM_CAPACITY;
         } else {
             while (newCapacity < proposedCapacity) {
-                newCapacity <<= 1;  // multiply by two
+                newCapacity <<= 1;  // multiply by sortExam.one.two
             }
             if (newCapacity > MAXIMUM_CAPACITY) {
                 newCapacity = MAXIMUM_CAPACITY;
@@ -1158,7 +1158,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
      * Writes the map data to the stream. This method must be overridden if a
      * subclass must be setup before <code>put()</code> is used.
      * <p>
-     * Serialization is not one of the JDK's nicest topics. Normal serialization will
+     * Serialization is not sortExam.one of the JDK's nicest topics. Normal serialization will
      * initialise the superclass before the subclass. Sometimes however, this isn't
      * what you want, as in this case the <code>put()</code> method on read can be
      * affected by subclass state.
@@ -1187,7 +1187,7 @@ public class AbstractHashedMap extends AbstractMap implements IterableMap {
      * Reads the map data from the stream. This method must be overridden if a
      * subclass must be setup before <code>put()</code> is used.
      * <p>
-     * Serialization is not one of the JDK's nicest topics. Normal serialization will
+     * Serialization is not sortExam.one of the JDK's nicest topics. Normal serialization will
      * initialise the superclass before the subclass. Sometimes however, this isn't
      * what you want, as in this case the <code>put()</code> method on read can be
      * affected by subclass state.
