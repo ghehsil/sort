@@ -1,4 +1,4 @@
-package test;
+package sortLesson;
 
 /**
  * 八皇后（动态规划）

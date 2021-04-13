@@ -1,4 +1,4 @@
-package test;
+package sortLesson;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

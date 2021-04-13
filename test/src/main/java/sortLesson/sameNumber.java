@@ -1,7 +1,10 @@
-package test;
+package sortLesson;
 
 import java.util.Arrays;
 
+/**
+ * 动态规划找到两个数组相同的数字
+ */
 public class sameNumber {
     static int[] int1 = new int[]{3, 3, 3, 2, 2, 1};
     static int[] int2 = new int[]{1, 2, 3, 3, 3, 4};

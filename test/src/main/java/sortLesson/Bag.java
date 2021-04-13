@@ -1,4 +1,4 @@
-package test;
+package sortLesson;
 
 /**
  * 动态规划（0-1背包）

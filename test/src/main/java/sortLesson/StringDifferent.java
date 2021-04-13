@@ -1,4 +1,4 @@
-package test;
+package sortLesson;
 
 /**
  * 动态规划求不同字符串的不同

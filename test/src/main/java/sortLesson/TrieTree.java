@@ -1,9 +1,12 @@
-package test;
+package sortLesson;
 
 import com.google.common.collect.Maps;
 
 import java.util.Map;
 
+/**
+ * trie字典树
+ */
 public class TrieTree {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package test;
+package sortLesson;
 
 /**
  * 平方根 开方

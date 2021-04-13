@@ -1,8 +1,11 @@
-package test;
+package sortLesson;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * map判断两个String是不是包含同样的字符
+ */
 public class sameString {
     public static void main(String[] args) {
         String str1 = "strirng";

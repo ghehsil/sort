@@ -1,4 +1,4 @@
-package test;
+package sortLesson;
 
 /**
  * 回溯
@@ -33,7 +33,8 @@ public class BackUp {
         back(i, j + 1, value + values[i][j]);
     }
 
-    public static void minDistBT(int i, int j, int dist, int[][] w, int n) { // 到达了n-1, n-1这个位置了，这里看着有点奇怪哈，你自己举个例子看下
+    public static void minDistBT(int i, int j, int dist, int[][] w, int n) {
+        // 到达了n-1, n-1这个位置了，这里看着有点奇怪哈，你自己举个例子看下
         if (i == n && j == n) {
             if (dist < minDist) {
                 minDist = dist;
